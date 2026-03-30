@@ -74,6 +74,8 @@ public class Post {
 
 	public void setTimestamp(LocalDateTime timestamp) {
 		this.timestamp = timestamp;
-		this.raw_time = Timestamp.valueOf(timestamp);
+		if (timestamp != null) {
+			this.raw_time = Timestamp.valueOf(timestamp);
+		}
 	}
 }
